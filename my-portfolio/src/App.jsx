@@ -1,15 +1,15 @@
-import { Routes, Route } from 'react-router-dom';
-import Navbar from './components/Navbar';
-import Home from './pages/Home';
-import About from './pages/About';
-import Projects from './pages/Projects';
-import ProjectDetail from './pages/ProjectDetail';
-import Contact from './pages/Contact';
-import NotFound from './pages/NotFound';
+import { Routes, Route } from "react-router-dom";
+import Navbar from "./components/Navbar";
+import Home from "./pages/Home";
+import About from "./pages/About";
+import Projects from "./pages/Projects";
+import ProjectDetail from "./pages/ProjectDetail";
+import Contact from "./pages/Contact";
+import NotFound from "./pages/NotFound";
 
 export default function App() {
   return (
-    <div>
+    <div className="app-container">
       <Navbar />
       <Routes>
         <Route path="/" element={<Home />} />

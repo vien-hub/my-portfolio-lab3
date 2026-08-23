@@ -1,19 +1,25 @@
-import { Link } from 'react-router-dom';
-import { projects } from '../data/projects';
+import { Link } from "react-router-dom";
+import { projects } from "../data/projects.js";
 
 export default function Projects() {
   return (
-    <div>
-      <h1>Projects</h1>
-      <ul>
+    <div className="page">
+      <h1>Featured Projects</h1>
+      <p className="subtitle">Explore my recent work and client-side web applications.</p>
+      
+      <div className="grid">
         {projects.map((project) => (
-          <li key={project.id}>
-            <h3>{project.title}</h3>
-            <p>{project.description}</p>
-            <Link to={`/projects/${project.id}`}>View Details</Link>
-          </li>
+          <div key={project.id} className="card">
+            <div>
+              <h3>{project.title}</h3>
+              <p>{project.description}</p>
+            </div>
+            <Link to={`/projects/${project.id}`} className="btn btn-secondary">
+              View Details →
+            </Link>
+          </div>
         ))}
-      </ul>
+      </div>
     </div>
   );
 }
